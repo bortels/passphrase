@@ -1,0 +1,10 @@
+#!/usr/local/bin/python3
+
+import secrets
+import string
+
+with open('wordlist') as f:
+    words = [word.strip() for word in f]
+    phrase = ' '.join(secrets.choice(words) for i in range(8))
+
+print(phrase)
